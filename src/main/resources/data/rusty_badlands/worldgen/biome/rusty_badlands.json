@@ -1,0 +1,18 @@
+{
+  "attributes": {
+    "minecraft:gameplay/snow_golem_melts": true
+  },
+  "temperature": 2,
+  "downfall": 0,
+  "has_precipitation": false,
+  "effects": {
+    "sky_color": 12638463,
+    "fog_color": 12638463,
+    "water_color": "#bf723b",
+    "water_fog_color": "#bf723b"
+  },
+  "spawners": {},
+  "spawn_costs": {},
+  "carvers": [],
+  "features": []
+}

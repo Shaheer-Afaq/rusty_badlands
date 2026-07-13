@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "rusty_badlands",
+	"version": "${version}",
+	"name": "Rusty Badlands",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/rusty_badlands/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"rusty_badlands.RustyBadlands"
+		],
+		"client": [
+			"rusty_badlands.client.RustyBadlandsClient"
+		],
+		"fabric-datagen": [
+			"rusty_badlands.client.DataGenerator"
+		],
+		"terrablender": [
+			"rusty_badlands.ModTerrablenderAPI"
+		]
+	},
+	"mixins": [
+		"rusty_badlands.mixins.json",
+		{
+			"config": "rusty_badlands.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
