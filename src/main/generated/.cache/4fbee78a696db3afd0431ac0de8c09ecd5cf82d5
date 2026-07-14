@@ -1,4 +1,4 @@
 // 26.2	-999999999-01-01T00:00:00	Rusty Badlands/ModelProvider
-96f31a8871aa5fea02e255f4e338c63bd9053984 assets/rusty_badlands/blockstates/rusted_stone.json
-13a52da2f036fb6e490da2ad0165b67d24391854 assets/rusty_badlands/items/rusted_stone.json
-6cb90a0baecb6c9bc524e834eb5aca8e9fd8c45a assets/rusty_badlands/models/block/rusted_stone.json
+7ee68fc28aa6536da40a1e456c9f614b9ba9bf29 assets/rusty_badlands/blockstates/rusty_sand.json
+aee18cd7c9cde4699104f8f3d83459aeb6fac6d6 assets/rusty_badlands/items/rusty_sand.json
+8a9e6453022942ae65c1007f192ca8872ff33b62 assets/rusty_badlands/models/block/rusty_sand.json

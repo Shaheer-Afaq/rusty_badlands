@@ -17,8 +17,8 @@ import java.util.function.Function;
 
 public class ModBlocks {
 
-    public static final Block RUSTED_STONE = register(
-            "rusted_stone",
+    public static final Block RUSTY_SAND = register(
+            "rusty_sand",
             Block::new,
             BlockBehaviour.Properties.of().sound(SoundType.STONE),
             true
@@ -26,7 +26,7 @@ public class ModBlocks {
 
     public static void initialize() {
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register((creativeTab) -> {
-            creativeTab.accept(ModBlocks.RUSTED_STONE.asItem());
+            creativeTab.accept(ModBlocks.RUSTY_SAND.asItem());
         });
     }
 

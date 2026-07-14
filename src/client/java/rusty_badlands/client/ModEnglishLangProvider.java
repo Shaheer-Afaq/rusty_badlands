@@ -13,7 +13,7 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(HolderLookup.Provider holderLookup, TranslationBuilder translationBuilder) {
-        translationBuilder.add("block.rusty_badlands.rusted_stone", "Rusted Stone");
+        translationBuilder.add("block.rusty_badlands.rusty_sand", "Rusty Sand");
 
     }
 }
