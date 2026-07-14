@@ -14,6 +14,7 @@ public class RustyBadlands implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModBlocks.initialize();
+		ModParticles.initialize();
 	}
 
 	public static Identifier id(String path) {
