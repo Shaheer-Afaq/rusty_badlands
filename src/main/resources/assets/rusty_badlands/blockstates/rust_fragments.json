@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "rusty_badlands:block/rust_fragments" }
+  }
+}

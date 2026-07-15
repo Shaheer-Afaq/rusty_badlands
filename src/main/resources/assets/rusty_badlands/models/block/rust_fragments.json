@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "rusty_badlands:block/rust_fragments",
+    "texture": "rusty_badlands:block/rust_fragments"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 0],
+      "to": [16, 0.2, 16],
+      "faces": {
+        "up": { "uv": [0, 0, 16, 16], "texture": "#texture", "cullface": "up" },
+        "down": { "uv": [0, 0, 16, 16], "texture": "#texture", "cullface": "down" }
+      }
+    }
+  ]
+}

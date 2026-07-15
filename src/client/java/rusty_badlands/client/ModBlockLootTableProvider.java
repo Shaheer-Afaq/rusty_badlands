@@ -15,5 +15,6 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
     @Override
     public void generate() {
         dropSelf(ModBlocks.RUSTY_SAND);
+        dropSelf(ModBlocks.RUST_FRAGMENTS);
     }
 }

@@ -18,7 +18,7 @@ public class ModSurfaceRules {
         );
 
         SurfaceRules.RuleSource surface = SurfaceRules.state(
-                ModBlocks.RUSTY_SAND.defaultBlockState()
+                Blocks.RED_SAND.defaultBlockState()
         );
 
         SurfaceRules.RuleSource subSurface = SurfaceRules.state(

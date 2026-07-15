@@ -21,6 +21,8 @@ public class ModOverworldRegion extends Region {
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper) {
         this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
             modifiedVanillaOverworldBuilder.replaceBiome(Biomes.BADLANDS, ModBiomes.RUSTY_BADLANDS);
+            modifiedVanillaOverworldBuilder.replaceBiome(Biomes.ERODED_BADLANDS, ModBiomes.RUSTY_BADLANDS);
+            modifiedVanillaOverworldBuilder.replaceBiome(Biomes.WOODED_BADLANDS, ModBiomes.RUSTY_BADLANDS);
         });
     }
 }
