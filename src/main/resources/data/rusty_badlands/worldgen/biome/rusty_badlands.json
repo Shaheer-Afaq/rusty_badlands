@@ -33,7 +33,8 @@
   },
   "features": [
     [
-      "rusty_badlands:red_sand_patch"
+      "rusty_badlands:red_sand_patch",
+      "rusty_badlands:rust_fragments_patch"
     ],
     [
       "minecraft:lake_lava_underground",

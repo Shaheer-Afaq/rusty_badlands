@@ -1,5 +1,9 @@
 {
   "variants": {
-    "": { "model": "rusty_badlands:block/rust_fragments" }
+    "": [
+      { "model": "rusty_badlands:block/rust_fragments1" },
+      { "model": "rusty_badlands:block/rust_fragments2" },
+      { "model": "rusty_badlands:block/rust_fragments3" }
+    ]
   }
 }

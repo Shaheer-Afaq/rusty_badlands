@@ -33,7 +33,7 @@ public class ModBlocks {
     public static final Block RUST_FRAGMENTS = register(
             "rust_fragments",
             RustFragmentsBlock::new,
-            BlockBehaviour.Properties.of().instabreak().noCollision().sound(SoundType.LEAF_LITTER),
+            BlockBehaviour.Properties.of().instabreak().noCollision().sound(SoundType.LEAF_LITTER).replaceable(),
             true
     );
 
