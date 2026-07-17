@@ -6,12 +6,15 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.util.ColorRGBA;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SandBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
 import rusty_badlands.blocks.RustFragmentsBlock;
 
 import java.util.function.Function;
@@ -20,14 +23,14 @@ public class ModBlocks {
 
     public static final Block RUSTY_SAND = register(
             "rusty_sand",
-            Block::new,
-            BlockBehaviour.Properties.of().strength(0.7F).sound(SoundType.SAND),
+            properties -> new SandBlock(new ColorRGBA(0xB5651D), properties),
+            BlockBehaviour.Properties.of().strength(0.7F).sound(SoundType.SAND).mapColor(MapColor.COLOR_ORANGE),
             true
     );
     public static final Block RUSTY_STONE = register(
             "rusty_stone",
             Block::new,
-            BlockBehaviour.Properties.of().strength(0.7F).sound(SoundType.SAND),
+            BlockBehaviour.Properties.of().strength(0.7F).sound(SoundType.STONE),
             true
     );
     public static final Block RUST_FRAGMENTS = register(

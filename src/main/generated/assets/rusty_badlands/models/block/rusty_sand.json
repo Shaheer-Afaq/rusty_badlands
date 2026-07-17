@@ -1,8 +1,6 @@
 {
-  "parent": "minecraft:block/cube_bottom_top",
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "bottom": "rusty_badlands:block/rusty_sand_bottom",
-    "side": "rusty_badlands:block/rusty_sand_side",
-    "top": "rusty_badlands:block/rusty_sand_top"
+    "all": "rusty_badlands:block/rusty_sand"
   }
 }

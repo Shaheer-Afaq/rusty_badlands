@@ -1,37 +1,12 @@
 {
-  "type": "minecraft:vegetation_patch",
+  "type": "minecraft:simple_block",
   "config": {
-    "surface": "floor",
-    "depth": 1,
-    "vertical_range": 3,
-    "extra_bottom_block_chance": 0,
-    "extra_edge_column_chance": 0.4,
-    "vegetation_chance": 0.7,
-    "xz_radius": {
-      "type": "minecraft:uniform",
-      "min_inclusive": 1,
-      "max_inclusive": 2
-    },
-    "replaceable": "minecraft:red_sand",
-    "ground_state": {
+    "to_place": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "minecraft:red_sand"
+        "Name": "rusty_badlands:rust_fragments"
       }
     },
-    "vegetation_feature": {
-      "feature": {
-        "config": {
-          "to_place": {
-            "type": "minecraft:simple_state_provider",
-            "state": {
-              "Name": "rusty_badlands:rust_fragments"
-            }
-          }
-        },
-        "type": "minecraft:simple_block"
-      },
-      "placement": []
-    }
+    "schedule_tick": true
   }
 }

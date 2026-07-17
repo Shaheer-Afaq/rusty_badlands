@@ -1,7 +1,21 @@
 {
   "variants": {
-    "": {
-      "model": "rusty_badlands:block/rusty_sand"
-    }
+    "": [
+      {
+        "model": "rusty_badlands:block/rusty_sand"
+      },
+      {
+        "model": "rusty_badlands:block/rusty_sand",
+        "y": 90
+      },
+      {
+        "model": "rusty_badlands:block/rusty_sand",
+        "y": 180
+      },
+      {
+        "model": "rusty_badlands:block/rusty_sand",
+        "y": 270
+      }
+    ]
   }
 }

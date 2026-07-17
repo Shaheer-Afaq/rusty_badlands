@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
+import net.minecraft.client.data.models.ModelProvider;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.data.models.model.TexturedModel;
 import rusty_badlands.ModBlocks;
@@ -15,7 +16,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockStateModelGenerator) {
-        blockStateModelGenerator.createTrivialBlock(ModBlocks.RUSTY_SAND, TexturedModel.CUBE_TOP_BOTTOM);
+        blockStateModelGenerator.createRotatedVariantBlock(ModBlocks.RUSTY_SAND);
         blockStateModelGenerator.createTrivialBlock(ModBlocks.RUSTY_STONE, TexturedModel.CUBE);
     }
 

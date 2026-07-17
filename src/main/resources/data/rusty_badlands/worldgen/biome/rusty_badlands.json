@@ -14,9 +14,10 @@
         "particle": {
           "type": "rusty_badlands:rust"
         },
-        "probability": 0.003
+        "probability": 0.002
       }
-    ]
+    ],
+    "minecraft:visual/water_fog_color": "#5b3920"
   },
   "carvers": [
     "minecraft:cave",
@@ -28,13 +29,15 @@
   "effects": {
     "foliage_color": "#815f2c",
     "grass_color": "#815f2c",
-    "water_color": "#7c4627",
-    "dry_foliage_color": "#705a38"
+    "water_color": "#5b3920",
+    "dry_foliage_color": "#815f2c"
   },
   "features": [
     [
       "rusty_badlands:red_sand_patch",
-      "rusty_badlands:rust_fragments_patch"
+      "rusty_badlands:rust_fragments_patch",
+      "rusty_badlands:rusty_stone_patch",
+      "rusty_badlands:rusty_badlands_tree"
     ],
     [
       "minecraft:lake_lava_underground",
