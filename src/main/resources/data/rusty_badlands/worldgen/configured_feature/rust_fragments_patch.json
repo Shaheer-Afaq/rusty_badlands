@@ -12,11 +12,11 @@
       "min_inclusive": 1,
       "max_inclusive": 2
     },
-    "replaceable": "minecraft:red_sand",
+    "replaceable": "rusty_badlands:rusty_sand",
     "ground_state": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "minecraft:red_sand"
+        "Name": "rusty_badlands:rusty_sand"
       }
     },
     "vegetation_feature": {

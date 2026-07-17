@@ -10,20 +10,12 @@ public class ModSurfaceRules {
     public static SurfaceRules.RuleSource makeRules(HolderGetter<Biome> biomeHolderGetter) {
         SurfaceRules.ConditionSource isRustyBadlands = SurfaceRules.isBiome(biomeHolderGetter, ModBiomes.RUSTY_BADLANDS);
 
-        SurfaceRules.ConditionSource surfaceCondition = SurfaceRules.stoneDepthCheck(
-                1, false, 0, CaveSurface.FLOOR
-        );
-        SurfaceRules.ConditionSource subSurfaceCondition = SurfaceRules.stoneDepthCheck(
-                4, false, 0, CaveSurface.FLOOR
-        );
+        SurfaceRules.ConditionSource surfaceCondition = SurfaceRules.stoneDepthCheck(1, false, 0, CaveSurface.FLOOR);
+        SurfaceRules.ConditionSource subSurfaceCondition = SurfaceRules.stoneDepthCheck(4, false, 0, CaveSurface.FLOOR);
 
-        SurfaceRules.RuleSource surface = SurfaceRules.state(
-                Blocks.RED_SAND.defaultBlockState()
-        );
-
-        SurfaceRules.RuleSource subSurface = SurfaceRules.state(
-                Blocks.DYED_TERRACOTTA.red().defaultBlockState()
-        );
+        SurfaceRules.RuleSource surface = SurfaceRules.state(ModBlocks.RUSTY_SAND.defaultBlockState());
+        SurfaceRules.RuleSource subSurface = SurfaceRules.state(Blocks.DYED_TERRACOTTA.red().defaultBlockState());
+        SurfaceRules.RuleSource deepStone = SurfaceRules.state(ModBlocks.RUSTY_STONE.defaultBlockState());
 
         return SurfaceRules.sequence(
             SurfaceRules.ifTrue(
@@ -38,7 +30,7 @@ public class ModSurfaceRules {
                     )
 
                 )
-            )
+            ), deepStone
         );
     }
 }

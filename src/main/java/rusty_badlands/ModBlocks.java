@@ -27,7 +27,7 @@ public class ModBlocks {
     public static final Block RUSTY_STONE = register(
             "rusty_stone",
             Block::new,
-            BlockBehaviour.Properties.of().strength(0.7F).sound(SoundType.SAND),
+            BlockBehaviour.Properties.of().strength(0.7F).sound(SoundType.STONE),
             true
     );
     public static final Block RUST_FRAGMENTS = register(
