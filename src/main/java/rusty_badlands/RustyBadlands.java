@@ -15,6 +15,8 @@ public class RustyBadlands implements ModInitializer {
 	public void onInitialize() {
 		ModBlocks.initialize();
 		ModParticles.initialize();
+		ModEffects.initialize();
+		ModEvents.initialize();
 	}
 
 	public static Identifier id(String path) {
