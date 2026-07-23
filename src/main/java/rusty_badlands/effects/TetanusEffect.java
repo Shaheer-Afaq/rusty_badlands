@@ -28,9 +28,9 @@ public class TetanusEffect extends MobEffect {
 
     @Override
     public boolean applyEffectTick(ServerLevel level, LivingEntity entity, int amplifier) {
-        if (level.getGameTime() % 20 != 0) return true;
+        if (level.getGameTime() % 40 != 0) return true;
 
-        float tetanusStrength = entity.getAttachedOrCreate(ModAttachments.TETANUSSTRENGTH);
+        float tetanusStrength = (float) amplifier / 11;
 
         AttributeInstance speedAttribute = entity.getAttribute(Attributes.MOVEMENT_SPEED);
         AttributeInstance jumpAttribute = entity.getAttribute(Attributes.JUMP_STRENGTH);
@@ -48,19 +48,29 @@ public class TetanusEffect extends MobEffect {
             jumpAttribute.addOrUpdateTransientModifier(jumpModifier);
         }
 
-        tetanusStrength += 0.04f;
-        tetanusStrength = Math.clamp(tetanusStrength, 0, 0.85f);
-        entity.setAttached(ModAttachments.TETANUSSTRENGTH, tetanusStrength);
+        MobEffectInstance current = entity.getEffect(ModEffects.TETANUS);
+        int newAmplifier = Math.min(current.getAmplifier() + 1, 9);
+        if (newAmplifier != current.getAmplifier()) entity.addEffect(new MobEffectInstance(ModEffects.TETANUS, current.getDuration(), newAmplifier));
         return true;
     }
 
     @Override
     public void onEffectRemoved(@NonNull MobEffectInstance effectInstance, LivingEntity entity) {
-        entity.setAttached(ModAttachments.TETANUSSTRENGTH, 0f);
+//        entity.removeAttached(ModAttachments.TETANUSSTRENGTH);
         AttributeInstance speedAttribute = entity.getAttribute(Attributes.MOVEMENT_SPEED);
         if (speedAttribute != null) speedAttribute.removeModifier(SPEED_MODIFIER_ID);
         AttributeInstance jumpAttribute = entity.getAttribute(Attributes.JUMP_STRENGTH);
         if (jumpAttribute != null) jumpAttribute.removeModifier(JUMP_MODIFIER_ID);
     }
 
+    public static void increaseDuration(int ticks, LivingEntity livingEntity){
+        MobEffectInstance effect = livingEntity.getEffect(ModEffects.TETANUS);
+
+        int currentDuration = (effect != null) ? effect.getDuration() : 0;
+        int currentAmplifier =  (effect != null) ? effect.getAmplifier(): 0;
+
+        int newDuration = Math.min(((currentDuration + ticks) / 20) * 20, 3000);
+        livingEntity.addEffect(
+                new MobEffectInstance(ModEffects.TETANUS, newDuration, currentAmplifier));
+    }
 }

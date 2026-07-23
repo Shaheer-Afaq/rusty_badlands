@@ -1,4 +1,4 @@
-package rusty_badlands;
+package rusty_badlands.blocks;
 
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
@@ -11,11 +11,13 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SandBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
-import rusty_badlands.blocks.RustFragmentsBlock;
+import rusty_badlands.RustyBadlands;
 
 import java.util.function.Function;
 
@@ -30,7 +32,7 @@ public class ModBlocks {
     public static final Block RUSTY_STONE = register(
             "rusty_stone",
             Block::new,
-            BlockBehaviour.Properties.of().strength(0.7F).sound(SoundType.STONE),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.STONE),
             true
     );
     public static final Block RUST_FRAGMENTS = register(

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "#o#",
+    " # "
+  ],
+  "key": {
+    "#": "rusty_badlands:rust_fragments",
+    "o": "minecraft:slime_ball"
+  },
+  "result": {
+    "id": "rusty_badlands:rusty_ball"
+  }
+}

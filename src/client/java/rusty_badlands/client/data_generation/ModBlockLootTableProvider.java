@@ -1,9 +1,9 @@
-package rusty_badlands.client;
+package rusty_badlands.client.data_generation;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider;
 import net.minecraft.core.HolderLookup;
-import rusty_badlands.ModBlocks;
+import rusty_badlands.blocks.ModBlocks;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -16,5 +16,6 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
     public void generate() {
         dropSelf(ModBlocks.RUSTY_SAND);
         dropSelf(ModBlocks.RUST_FRAGMENTS);
+        dropSelf(ModBlocks.RUSTY_STONE);
     }
 }

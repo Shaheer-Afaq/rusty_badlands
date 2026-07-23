@@ -1,6 +1,7 @@
 package rusty_badlands;
 
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
+import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
@@ -18,9 +19,6 @@ import java.util.UUID;
 
 public class ModEvents {
     public static void initialize() {
-        ServerTickEvents.START_SERVER_TICK.register((server) -> {
-//            System.out.println("hi");
-        });
     }
 
 

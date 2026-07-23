@@ -1,4 +1,4 @@
-package rusty_badlands;
+package rusty_badlands.biome;
 
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.Registry;

@@ -2,6 +2,7 @@ package rusty_badlands.blocks;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
@@ -13,11 +14,13 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SupportType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import rusty_badlands.ModEffects;
+import rusty_badlands.effects.ModEffects;
+import rusty_badlands.effects.TetanusEffect;
 
 public class RustFragmentsBlock extends Block {
     public RustFragmentsBlock(Properties properties) {
@@ -37,25 +40,19 @@ public class RustFragmentsBlock extends Block {
     @Override
     protected boolean canSurvive(final BlockState state, final LevelReader level, final BlockPos pos) {
         BlockPos belowPos = pos.below();
-        return level.getBlockState(belowPos).isFaceSturdy(level, belowPos, Direction.UP);
+        BlockState belowState = level.getBlockState(belowPos);
+        return belowState.isFaceSturdy(level, belowPos, Direction.UP) || belowState.is(BlockTags.LEAVES);
     }
 
     @Override
     public void entityInside(final BlockState state, final Level level, final BlockPos pos, final Entity entity, final InsideBlockEffectApplier effectApplier, final boolean isPrecise) {
         if (level.isClientSide()) return;
         if (!(entity instanceof LivingEntity livingEntity)) return;
-        System.out.println(livingEntity.getKnownMovement().horizontalDistanceSqr());
         if (livingEntity.getRandom().nextFloat() > 0.05) return;
 
-        boolean isMoving = Math.abs(livingEntity.getKnownMovement().horizontalDistanceSqr()) > 0 ||
-                           Math.abs(livingEntity.getKnownMovement().y) > 0.08;
-        if (isMoving){
-            MobEffectInstance effect = livingEntity.getEffect(ModEffects.TETANUS);
-
-            int currentDuration = (effect != null) ? effect.getDuration() : 0;
-            int newDuration = Math.min(((currentDuration + 100) / 20) * 20, 3000);
-            livingEntity.addEffect(
-                    new MobEffectInstance(ModEffects.TETANUS, newDuration));
+        if (Math.abs(livingEntity.getKnownMovement().horizontalDistanceSqr()) > 0 ||
+                Math.abs(livingEntity.getKnownMovement().y) > 0.08){
+            TetanusEffect.increaseDuration(100, livingEntity);
         }
     }
 

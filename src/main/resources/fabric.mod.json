@@ -22,10 +22,10 @@
 			"rusty_badlands.client.RustyBadlandsClient"
 		],
 		"fabric-datagen": [
-			"rusty_badlands.client.DataGenerator"
+			"rusty_badlands.client.data_generation.DataGenerator"
 		],
 		"terrablender": [
-			"rusty_badlands.ModTerrablenderAPI"
+          "rusty_badlands.biome.ModTerrablenderAPI"
 		]
 	},
 	"mixins": [

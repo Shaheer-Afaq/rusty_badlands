@@ -1,4 +1,4 @@
-package rusty_badlands.client;
+package rusty_badlands.client.data_generation;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
@@ -14,7 +14,11 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
     @Override
     public void generateTranslations(HolderLookup.Provider holderLookup, TranslationBuilder translationBuilder) {
         translationBuilder.add("block.rusty_badlands.rusty_sand", "Rusty Sand");
+        translationBuilder.add("block.rusty_badlands.rusty_stone", "Rusty Stone");
         translationBuilder.add("block.rusty_badlands.rust_fragments", "Rust Fragments");
 
+        translationBuilder.add("item.rusty_badlands.rusty_ball", "Rusty Ball");
+
+        translationBuilder.add("effect.rusty_badlands.tetanus", "Tetanus");
     }
 }

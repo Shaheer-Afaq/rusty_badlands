@@ -1,11 +1,11 @@
-package rusty_badlands;
+package rusty_badlands.effects;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.effect.MobEffect;
-import rusty_badlands.effects.TetanusEffect;
+import rusty_badlands.RustyBadlands;
 
 public class ModEffects {
 

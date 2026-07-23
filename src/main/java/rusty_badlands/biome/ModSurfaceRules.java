@@ -1,10 +1,11 @@
-package rusty_badlands;
+package rusty_badlands.biome;
 
 import net.minecraft.core.HolderGetter;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.SurfaceRules;
 import net.minecraft.world.level.levelgen.placement.CaveSurface;
+import rusty_badlands.blocks.ModBlocks;
 
 public class ModSurfaceRules {
     public static SurfaceRules.RuleSource makeRules(HolderGetter<Biome> biomeHolderGetter) {

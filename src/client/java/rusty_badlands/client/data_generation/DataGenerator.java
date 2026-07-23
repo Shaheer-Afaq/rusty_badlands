@@ -1,4 +1,4 @@
-package rusty_badlands.client;
+package rusty_badlands.client.data_generation;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
@@ -10,7 +10,5 @@ public class DataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(ModEnglishLangProvider::new);
         pack.addProvider(ModModelProvider::new);
         pack.addProvider(ModBlockLootTableProvider::new);
-//        pack.addProvider(ModSoundProvider::new);
-//        pack.addProvider(ModRecipeProvider::new);
     }
 }

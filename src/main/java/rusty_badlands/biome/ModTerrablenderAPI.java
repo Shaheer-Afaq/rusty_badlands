@@ -1,6 +1,7 @@
-package rusty_badlands;
+package rusty_badlands.biome;
 
 import net.minecraft.resources.Identifier;
+import rusty_badlands.RustyBadlands;
 import terrablender.api.Regions;
 import terrablender.api.SurfaceRuleManager;
 import terrablender.api.TerraBlenderApi;

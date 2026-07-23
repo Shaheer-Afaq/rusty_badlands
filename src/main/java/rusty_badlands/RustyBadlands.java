@@ -6,6 +6,10 @@ import net.minecraft.resources.Identifier;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import rusty_badlands.blocks.ModBlocks;
+import rusty_badlands.effects.ModEffects;
+import rusty_badlands.entities.ModEntityTypes;
+import rusty_badlands.items.ModItems;
 
 public class RustyBadlands implements ModInitializer {
 	public static final String MOD_ID = "rusty_badlands";
@@ -14,9 +18,11 @@ public class RustyBadlands implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModBlocks.initialize();
+		ModItems.initialize();
 		ModParticles.initialize();
 		ModEffects.initialize();
 		ModEvents.initialize();
+		ModEntityTypes.initialize();
 	}
 
 	public static Identifier id(String path) {

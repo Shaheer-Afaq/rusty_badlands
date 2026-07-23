@@ -1,3 +1,4 @@
 // 26.2	-999999999-01-01T00:00:00	Rusty Badlands/Block Loot Tables
 911e4304b96b8fcdc29ae583e83d9213ca9c32ae data/rusty_badlands/loot_table/blocks/rust_fragments.json
 c6ca0cadb7284c88714e423f3a276e906eaed528 data/rusty_badlands/loot_table/blocks/rusty_sand.json
+c558873869ebef096d19a4c05d219f5e66f3d0c5 data/rusty_badlands/loot_table/blocks/rusty_stone.json

@@ -14,7 +14,7 @@
         "particle": {
           "type": "rusty_badlands:rust"
         },
-        "probability": 0.002
+        "probability": 0.004
       }
     ],
     "minecraft:visual/water_fog_color": "#5b3920"
