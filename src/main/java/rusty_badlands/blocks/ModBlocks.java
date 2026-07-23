@@ -46,6 +46,7 @@ public class ModBlocks {
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register((creativeTab) -> {
             creativeTab.accept(ModBlocks.RUSTY_SAND.asItem());
             creativeTab.accept(ModBlocks.RUST_FRAGMENTS.asItem());
+            creativeTab.accept(ModBlocks.RUSTY_STONE.asItem());
         });
     }
 

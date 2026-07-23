@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:block_blob",
+  "config": {
+    "state": {
+      "Name": "rusty_badlands:rusty_stone"
+    },
+    "can_place_on": {
+      "type": "minecraft:matching_blocks",
+      "blocks": "rusty_badlands:rusty_sand"
+    }
+  }
+}

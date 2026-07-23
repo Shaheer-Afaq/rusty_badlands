@@ -1,16 +1,12 @@
 {
-  "feature": "rusty_badlands:red_sand_patch",
+  "feature": "rusty_badlands:rusty_stone_boulder",
   "placement": [
-    {
-      "type": "minecraft:rarity_filter",
-      "chance": 2
-    },
     {
       "type": "minecraft:count",
       "count": {
-        "type": "minecraft:uniform",
+        "type": "minecraft:biased_to_bottom",
         "min_inclusive": 0,
-        "max_inclusive": 4
+        "max_inclusive": 2
       }
     },
     {
@@ -18,7 +14,7 @@
     },
     {
       "type": "minecraft:heightmap",
-      "heightmap": "WORLD_SURFACE"
+      "heightmap": "WORLD_SURFACE_WG"
     },
     {
       "type": "minecraft:biome"
