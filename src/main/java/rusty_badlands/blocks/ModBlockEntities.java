@@ -10,8 +10,8 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import rusty_badlands.RustyBadlands;
 
 public class ModBlockEntities {
-//    public static final BlockEntityType<RustyCoreBlockEntity> RUSTY_CORE_BLOCK_ENTITY =
-//            register("rusty_core", RustyCoreBlockEntity::new, ModBlocks.RUSTY_CORE);
+    public static final BlockEntityType<RustyCoreBlockEntity> RUSTY_CORE_BLOCK_ENTITY =
+            register("rusty_core", RustyCoreBlockEntity::new, ModBlocks.RUSTY_CORE);
 
     private static <T extends BlockEntity> BlockEntityType<T> register(String name, FabricBlockEntityTypeBuilder.Factory<? extends T> entityFactory, Block... blocks) {
         Identifier id = Identifier.fromNamespaceAndPath(RustyBadlands.MOD_ID, name);

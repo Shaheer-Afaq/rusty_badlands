@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "rusty_badlands:rusty_geyser",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 3,
+    "separation": 2,
+    "salt": 423422
+  }
+}
