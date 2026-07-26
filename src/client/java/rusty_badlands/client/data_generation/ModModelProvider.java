@@ -19,6 +19,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockModelGenerators blockStateModelGenerator) {
         blockStateModelGenerator.createRotatedVariantBlock(ModBlocks.RUSTY_SAND);
         blockStateModelGenerator.createTrivialBlock(ModBlocks.RUSTY_STONE, TexturedModel.CUBE);
+        blockStateModelGenerator.createTrivialBlock(ModBlocks.RUSTY_CORE, TexturedModel.CUBE);
     }
 
     @Override

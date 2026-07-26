@@ -16,6 +16,7 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add("block.rusty_badlands.rusty_sand", "Rusty Sand");
         translationBuilder.add("block.rusty_badlands.rusty_stone", "Rusty Stone");
         translationBuilder.add("block.rusty_badlands.rust_fragments", "Rust Fragments");
+        translationBuilder.add("block.rusty_badlands.rusty_core", "Rusty Core");
 
         translationBuilder.add("item.rusty_badlands.rusty_ball", "Rusty Ball");
 

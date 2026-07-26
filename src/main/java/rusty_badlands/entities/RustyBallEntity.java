@@ -9,6 +9,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
@@ -34,6 +35,9 @@ public class RustyBallEntity extends ThrowableItemProjectile {
 
     public RustyBallEntity(final LivingEntity owner, final Level level, final ItemStack itemStack) {
         super(ModEntityTypes.RUSTY_BALL, owner, level, itemStack);
+    }
+    public RustyBallEntity(final Level level, final double x, final double y, final double z, final ItemStack itemStack) {
+        super(ModEntityTypes.RUSTY_BALL, x, y, z, level, itemStack);
     }
 
     @Override

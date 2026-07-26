@@ -10,14 +10,12 @@ import net.minecraft.util.ColorRGBA;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SandBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import rusty_badlands.RustyBadlands;
+import rusty_badlands.items.ModItems;
 
 import java.util.function.Function;
 
@@ -41,14 +39,13 @@ public class ModBlocks {
             BlockBehaviour.Properties.of().instabreak().noCollision().sound(SoundType.LEAF_LITTER).replaceable(),
             true
     );
+    public static final Block RUSTY_CORE = register(
+            "rusty_core",
+            RustyCoreBlock::new,
+            BlockBehaviour.Properties.ofFullCopy(Blocks.STONE),
+            true
+    );
 
-    public static void initialize() {
-        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register((creativeTab) -> {
-            creativeTab.accept(ModBlocks.RUSTY_SAND.asItem());
-            creativeTab.accept(ModBlocks.RUST_FRAGMENTS.asItem());
-            creativeTab.accept(ModBlocks.RUSTY_STONE.asItem());
-        });
-    }
 
     private static Block register(String name, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties properties, boolean shouldRegisterItem) {
         ResourceKey<Block> blockKey = keyOfBlock(name);
@@ -62,6 +59,17 @@ public class ModBlocks {
         }
 
         return Registry.register(BuiltInRegistries.BLOCK, blockKey, block);
+    }
+
+    public static void initialize() {
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register((creativeTab) -> {
+            creativeTab.accept(ModBlocks.RUSTY_SAND.asItem());
+            creativeTab.accept(ModBlocks.RUST_FRAGMENTS.asItem());
+            creativeTab.accept(ModBlocks.RUSTY_STONE.asItem());
+            creativeTab.accept(ModBlocks.RUSTY_CORE.asItem());
+        });
+
+        DispenserBlock.registerProjectileBehavior(ModItems.RUSTY_BALL);
     }
 
     private static ResourceKey<Block> keyOfBlock(String name) {

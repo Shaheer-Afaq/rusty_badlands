@@ -17,5 +17,6 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(ModBlocks.RUSTY_SAND);
         dropSelf(ModBlocks.RUST_FRAGMENTS);
         dropSelf(ModBlocks.RUSTY_STONE);
+        dropSelf(ModBlocks.RUSTY_CORE);
     }
 }
