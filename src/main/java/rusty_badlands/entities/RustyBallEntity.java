@@ -50,7 +50,7 @@ public class RustyBallEntity extends ThrowableItemProjectile {
         if (this.level().isClientSide()) return;
         if (result.getEntity() instanceof LivingEntity target) {
             target.hurtServer((ServerLevel) this.level(), this.damageSources().thrown(this, this.getOwner()), 0.5f);
-            TetanusEffect.increaseDuration(160, target);
+            TetanusEffect.increaseDuration(100, target);
             this.level().playSound(null, target.getX(), target.getY(), target.getZ(), SoundEvents.THORNS_HIT, SoundSource.NEUTRAL);
         }
         this.discard();

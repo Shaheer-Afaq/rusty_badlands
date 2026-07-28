@@ -34,7 +34,7 @@
   },
   "features": [
     [
-      "rusty_badlands:rust_fragments_patch",
+      "rusty_badlands:rust_fragments",
       "rusty_badlands:rusty_badlands_tree",
       "rusty_badlands:rusty_stone_boulder"
     ],

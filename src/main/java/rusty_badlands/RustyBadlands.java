@@ -27,6 +27,7 @@ public class RustyBadlands implements ModInitializer {
 		ModEvents.initialize();
 		ModEntityTypes.initialize();
 		TaskScheduler.initialize();
+		ModSounds.initialize();
 	}
 
 	public static Identifier id(String path) {

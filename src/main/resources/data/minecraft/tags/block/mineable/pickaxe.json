@@ -1,3 +1,6 @@
 {
-  "values": ["rusty_badlands:rusty_stone"]
+  "values": [
+    "rusty_badlands:rusty_stone",
+    "rusty_badlands:rusty_core"
+  ]
 }

@@ -1,0 +1,8 @@
+{
+  "geyser_erupt": {
+    "sounds": [
+      "rusty_badlands:geyser_erupt"
+    ],
+    "subtitle": "sound.rusty_badlands.geyser_erupt"
+  }
+}
