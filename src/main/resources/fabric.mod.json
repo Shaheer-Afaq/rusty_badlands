@@ -3,7 +3,7 @@
 	"id": "rusty_badlands",
 	"version": "${version}",
 	"name": "Rusty Badlands",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "This mod adds a custom biome Rusty Badlands, which is a variant of the vanilla Badlands biome.",
 	"authors": [
 		"Me!"
 	],
