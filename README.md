@@ -44,3 +44,8 @@ Minecraft version: 26.2
 
 <img width="500" alt="rusty_badlands_rusty_ball" src="https://github.com/user-attachments/assets/ad817f72-3ba7-4267-97f4-5e63b20cfce7" />
 
+---
+**Tetanus Effect**
+
+<img width="310" height="115" alt="image" src="https://github.com/user-attachments/assets/6ba7cb9b-2766-418a-950b-8044db663e34" />
+
