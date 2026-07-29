@@ -23,5 +23,6 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add("effect.rusty_badlands.tetanus", "Tetanus");
 
         translationBuilder.add("sound.rusty_badlands.geyser_erupt", "Geyser Erupts");
+        translationBuilder.add("sound.rusty_badlands.walk_rust", "Rust Pricks");
     }
 }

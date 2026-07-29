@@ -20,6 +20,7 @@ public class ModSoundProvider extends FabricSoundsProvider {
     @Override
     protected void configure(HolderLookup.Provider registryLookup, SoundExporter exporter) {
         register(exporter, ModSounds.GEYSER_ERUPT, "geyser_erupt");
+        register(exporter, ModSounds.WALK_RUST, "walk_rust1", "walk_rust2", "walk_rust3");
     }
 
     void register(SoundExporter exporter, SoundEvent sound, String... files) {

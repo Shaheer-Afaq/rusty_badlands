@@ -11,6 +11,7 @@ public class ModSounds {
     }
 
     public static final SoundEvent GEYSER_ERUPT = registerSound("geyser_erupt");
+    public static final SoundEvent WALK_RUST = registerSound("walk_rust");
 
 
     private static SoundEvent registerSound(String id) {

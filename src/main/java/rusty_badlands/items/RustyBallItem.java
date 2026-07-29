@@ -29,7 +29,7 @@ public class RustyBallItem extends Item implements ProjectileItem {
         if (!level.isClientSide()) {
             RustyBallEntity entity = new RustyBallEntity(player, level, stack);
             entity.setItem(stack);
-            entity.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 2.5f, 0.1f);
+            entity.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 2f, 0.1f);
             level.addFreshEntity(entity);
             level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ENDER_PEARL_THROW, SoundSource.PLAYERS);
         }

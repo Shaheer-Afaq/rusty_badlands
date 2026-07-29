@@ -2,6 +2,7 @@ package rusty_badlands.blocks;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -19,6 +20,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import rusty_badlands.ModSounds;
 import rusty_badlands.effects.ModEffects;
 import rusty_badlands.effects.TetanusEffect;
 
@@ -53,6 +55,7 @@ public class RustFragmentsBlock extends Block {
         if (Math.abs(livingEntity.getKnownMovement().horizontalDistanceSqr()) > 0 ||
                 Math.abs(livingEntity.getKnownMovement().y) > 0.08){
             TetanusEffect.increaseDuration(100, livingEntity);
+            level.playSound(null, pos, ModSounds.WALK_RUST, SoundSource.BLOCKS, 0.5f, level.getRandom().nextFloat() * 0.5f + 0.5f);
         }
     }
 

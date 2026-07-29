@@ -4,5 +4,13 @@
       "rusty_badlands:geyser_erupt"
     ],
     "subtitle": "sound.rusty_badlands.geyser_erupt"
+  },
+  "walk_rust": {
+    "sounds": [
+      "rusty_badlands:walk_rust1",
+      "rusty_badlands:walk_rust2",
+      "rusty_badlands:walk_rust3"
+    ],
+    "subtitle": "sound.rusty_badlands.walk_rust"
   }
 }
